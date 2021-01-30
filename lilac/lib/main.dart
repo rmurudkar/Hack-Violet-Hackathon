@@ -10,6 +10,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        resizeToAvoidBottomPadding: false,
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
@@ -38,7 +39,10 @@ class _userGreetingState extends State<userGreeting> {
           height: 30,
           width: 240,
           color: Colors.transparent,
-          child: Text("Hello [User Name],", style: TextStyle(fontSize: 25),),
+          child: Text(
+            "Hello [User Name],",
+            style: TextStyle(fontSize: 25),
+          ),
         ),
         userFeelings(),
         FeelingInput(),
@@ -55,7 +59,10 @@ class userFeelings extends StatelessWidget {
       height: 30,
       width: 240,
       color: Colors.transparent,
-      child: Text("How are you feeling today?", style: TextStyle(fontSize: 18),),
+      child: Text(
+        "How are you feeling today?",
+        style: TextStyle(fontSize: 18),
+      ),
     );
   }
 }
@@ -69,20 +76,27 @@ class _FeelingInputState extends State<FeelingInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 35, horizontal: 40),
-      height: 200,
+      padding: EdgeInsets.symmetric(vertical: 30, horizontal: 40),
+      height: 230,
       width: 270,
-      color: Colors.pink[100],
-      child: TextField(
-        decoration: InputDecoration(
-            border: InputBorder.none,
-            hintText: 'Enter feelings here'
+      decoration: new BoxDecoration(
+        color: Colors.pink[100],
+        borderRadius: new BorderRadius.only(
+          topLeft: const Radius.circular(20.0),
+          topRight: const Radius.circular(20.0),
+          bottomLeft: const Radius.circular(20.0),
+          bottomRight: const Radius.circular(20.0),
         ),
+      ),
+      child: TextField(
+        keyboardType: TextInputType.multiline,
+        maxLines: 7,
+        decoration: InputDecoration(
+            border: InputBorder.none, hintText: 'Enter Your feelings here'),
       ),
     );
   }
 }
-
 
 class BottomBar extends StatefulWidget {
   @override
