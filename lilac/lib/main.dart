@@ -31,15 +31,58 @@ class userGreeting extends StatefulWidget {
 class _userGreetingState extends State<userGreeting> {
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
-      height: 120,
-      width: 240,
-      color: Colors.transparent,
-      child: Text("Hello [User Name],", style: TextStyle(fontSize: 17),),
+    return Column(
+      children: <Widget>[
+        Container(
+          margin: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+          height: 30,
+          width: 240,
+          color: Colors.transparent,
+          child: Text("Hello [User Name],", style: TextStyle(fontSize: 25),),
+        ),
+        userFeelings(),
+        FeelingInput(),
+      ],
     );
   }
 }
+
+class userFeelings extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 33, horizontal: 30),
+      height: 30,
+      width: 240,
+      color: Colors.transparent,
+      child: Text("How are you feeling today?", style: TextStyle(fontSize: 18),),
+    );
+  }
+}
+
+class FeelingInput extends StatefulWidget {
+  @override
+  _FeelingInputState createState() => _FeelingInputState();
+}
+
+class _FeelingInputState extends State<FeelingInput> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 35, horizontal: 40),
+      height: 200,
+      width: 270,
+      color: Colors.pink[100],
+      child: TextField(
+        decoration: InputDecoration(
+            border: InputBorder.none,
+            hintText: 'Enter feelings here'
+        ),
+      ),
+    );
+  }
+}
+
 
 class BottomBar extends StatefulWidget {
   @override
