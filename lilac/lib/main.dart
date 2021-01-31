@@ -165,7 +165,7 @@ class _WorriesInputState extends State<WorriesInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 40),
       height: 80,
       width: 270,
       decoration: new BoxDecoration(
@@ -196,7 +196,7 @@ class _StressInputState extends State<StressInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 40),
       height: 80,
       width: 270,
       decoration: new BoxDecoration(
@@ -227,7 +227,7 @@ class _ChallengeInputState extends State<ChallengeInput> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      padding: EdgeInsets.symmetric(vertical: 8, horizontal: 40),
       height: 80,
       width: 270,
       decoration: new BoxDecoration(
