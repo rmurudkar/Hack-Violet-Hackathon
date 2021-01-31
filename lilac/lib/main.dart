@@ -169,7 +169,7 @@ class _WorriesInputState extends State<WorriesInput> {
       height: 80,
       width: 270,
       decoration: new BoxDecoration(
-        color: Colors.deepPurpleAccent[100],
+        color: Colors.purple[100],
         borderRadius: new BorderRadius.only(
           topLeft: const Radius.circular(20.0),
           topRight: const Radius.circular(20.0),
@@ -200,7 +200,7 @@ class _StressInputState extends State<StressInput> {
       height: 80,
       width: 270,
       decoration: new BoxDecoration(
-        color: Colors.deepPurpleAccent[100],
+        color: Colors.purple[100],
         borderRadius: new BorderRadius.only(
           topLeft: const Radius.circular(20.0),
           topRight: const Radius.circular(20.0),
@@ -231,7 +231,7 @@ class _ChallengeInputState extends State<ChallengeInput> {
       height: 80,
       width: 270,
       decoration: new BoxDecoration(
-        color: Colors.deepPurpleAccent[100],
+        color: Colors.purple[100],
         borderRadius: new BorderRadius.only(
           topLeft: const Radius.circular(20.0),
           topRight: const Radius.circular(20.0),
