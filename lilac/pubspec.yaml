@@ -53,6 +53,7 @@ flutter:
     - assets/angry.png
     - assets/depressed.png
     - assets/Lilac2.png
+    - assets/source.gif
 
   fonts:
     - family: Alata

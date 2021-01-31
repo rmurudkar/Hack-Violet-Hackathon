@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:lilac/home_screen.dart';
+import 'package:lilac/screens/home_screen.dart';
+import 'package:lilac/screens/feed_screen.dart';
+import 'package:lilac/screens/third_screen.dart';
+
 
 class Nav extends StatefulWidget {
   @override
@@ -10,8 +13,8 @@ class _NavState extends State<Nav> {
   int _selectedIndex=0;
   List<Widget> _widgetOptions= <Widget>[
     Home(),
-    Text('Feed'),
-    Text('Settings'),
+    Feed(),
+    ThirdScreen(),
   ];
 
   void _onItemtap(int index) {
@@ -45,7 +48,7 @@ class _NavState extends State<Nav> {
           ),
           BottomNavigationBarItem(
             icon: Icon(
-              Icons.settings,
+              Icons.tag_faces,
               color: Colors.black,
             ),
             title: Text("Settings", style: TextStyle(color: Colors.black)),
