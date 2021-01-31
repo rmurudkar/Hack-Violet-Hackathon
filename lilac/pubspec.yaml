@@ -46,6 +46,18 @@ flutter:
 
   assets:
     - assets/chill.png
+    - assets/happy.png
+    - assets/hyped.png
+    - assets/sad.png
+    - assets/anxious.png
+    - assets/angry.png
+    - assets/depressed.png
+    - assets/Lilac2.png
+
+  fonts:
+    - family: Alata
+      fonts:
+        - asset: fonts/Alata/Alata-Regular.ttf
 
   # To add assets to your application, add an assets section, like this:
   # assets:

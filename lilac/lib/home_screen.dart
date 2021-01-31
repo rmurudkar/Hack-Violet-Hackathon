@@ -33,28 +33,116 @@ class MoodIcons extends StatefulWidget {
 class _MoodIconsState extends State<MoodIcons> {
   @override
   Widget build(BuildContext context) {
-    // return Row(
-    //
-    // );
-
-    return Column(
-      mainAxisSize: MainAxisSize.min,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      mainAxisSize: MainAxisSize.max,
       children: <Widget>[
-        IconButton(
-          icon: ImageIcon(
-            AssetImage('assets/chill.png'),
-            size: 20,
-            color: Colors.deepPurpleAccent,),
-          // icon: Icon(Icons.volume_up),
-          tooltip: 'Chill',
-          onPressed: () {
-            // setState(() {
-            //   _volume += 10;
-            // });
-          },
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/chill.png'),
+                size: 20,
+                color: Colors.deepPurpleAccent,),
+              tooltip: 'Chill',
+              onPressed: () {
+              },
+            ),
+            Text('Chill')
+          ],
         ),
-        Text('Chill')
-      ],
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/happy.png'),
+                size: 20,
+                color: Colors.deepPurpleAccent,),
+              tooltip: 'Happy',
+              onPressed: () {
+              },
+            ),
+            Text('Happy')
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/hyped.png'),
+                size: 20,
+                color: Colors.deepPurpleAccent,),
+              tooltip: 'Hyped',
+              onPressed: () {
+              },
+            ),
+            Text('Hyped')
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/sad.png'),
+                size: 20,
+                color: Colors.deepPurpleAccent,),
+              tooltip: 'Sad',
+              onPressed: () {
+              },
+            ),
+            Text('Sad')
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/anxious.png'),
+                size: 20,
+                color: Colors.deepPurpleAccent,),
+              tooltip: 'Anxious',
+              onPressed: () {
+              },
+            ),
+            Text('Anxious')
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/angry.png'),
+                size: 20,
+                color: Colors.deepPurpleAccent,),
+              tooltip: 'Angry',
+              onPressed: () {
+              },
+            ),
+            Text('Angry')
+          ],
+        ),
+        Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            IconButton(
+              icon: ImageIcon(
+                AssetImage('assets/depressed.png'),
+                size: 20,
+                color: Colors.deepPurpleAccent,),
+              tooltip: 'Depressed',
+              onPressed: () {
+              },
+            ),
+            Text('Depressed')
+          ],
+        ),
+      ]
     );
   }
 }
