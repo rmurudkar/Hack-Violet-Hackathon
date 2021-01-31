@@ -70,7 +70,7 @@ class _UserGreetingState extends State<userGreeting> {
     return Column(
       children: <Widget>[
         Container(
-          margin: EdgeInsets.symmetric(vertical: 30, horizontal: 30),
+          margin: EdgeInsets.symmetric(vertical: 25, horizontal: 30),
           height: 30,
           width: 240,
           color: Colors.transparent,
@@ -79,9 +79,14 @@ class _UserGreetingState extends State<userGreeting> {
             style: TextStyle(fontSize: 25),
           ),
         ),
-        MoodIcons(),
         UserFeelings(),
-        FeelingInput(),
+        MoodIcons(),
+        UserWorries(),
+        WorriesInput(),
+        UserStress(),
+        StressInput(),
+        UserChallenge(),
+        ChallengeInput(),
       ],
     );
   }
@@ -91,8 +96,8 @@ class UserFeelings extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.symmetric(vertical: 33, horizontal: 30),
-      height: 30,
+      margin: EdgeInsets.symmetric(vertical: 1, horizontal: 30),
+      height: 25,
       width: 240,
       color: Colors.transparent,
       child: Text(
@@ -103,17 +108,65 @@ class UserFeelings extends StatelessWidget {
   }
 }
 
-class FeelingInput extends StatefulWidget {
-  @override
-  _FeelingInputState createState() => _FeelingInputState();
-}
-
-class _FeelingInputState extends State<FeelingInput> {
+class UserWorries extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 30, horizontal: 40),
-      height: 230,
+      margin: EdgeInsets.symmetric(vertical: 10, horizontal: 30),
+      height: 40,
+      width: 240,
+      color: Colors.transparent,
+      child: Text(
+        "Jot down any worries you have today:",
+        style: TextStyle(fontSize: 18),
+      ),
+    );
+  }
+}
+
+class UserStress extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      height: 40,
+      width: 240,
+      color: Colors.transparent,
+      child: Text(
+        "Anything stressing you out today?",
+        style: TextStyle(fontSize: 18),
+      ),
+    );
+  }
+}
+
+class UserChallenge extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.symmetric(vertical: 15, horizontal: 30),
+      height: 40,
+      width: 240,
+      color: Colors.transparent,
+      child: Text(
+        "Did you face any challenges throughout the day?",
+        style: TextStyle(fontSize: 18),
+      ),
+    );
+  }
+}
+
+class WorriesInput extends StatefulWidget {
+  @override
+  _WorriesInputState createState() => _WorriesInputState();
+}
+
+class _WorriesInputState extends State<WorriesInput> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 5, horizontal: 40),
+      height: 80,
       width: 270,
       decoration: new BoxDecoration(
         color: Colors.deepPurpleAccent[100],
@@ -128,7 +181,69 @@ class _FeelingInputState extends State<FeelingInput> {
         keyboardType: TextInputType.multiline,
         maxLines: 7,
         decoration: InputDecoration(
-            border: InputBorder.none, hintText: 'Enter Your feelings here'),
+            border: InputBorder.none, hintText: 'Type here...'),
+      ),
+    );
+  }
+}
+
+class StressInput extends StatefulWidget {
+  @override
+  _StressInputState createState() => _StressInputState();
+}
+
+class _StressInputState extends State<StressInput> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 10, horizontal: 40),
+      height: 80,
+      width: 270,
+      decoration: new BoxDecoration(
+        color: Colors.deepPurpleAccent[100],
+        borderRadius: new BorderRadius.only(
+          topLeft: const Radius.circular(20.0),
+          topRight: const Radius.circular(20.0),
+          bottomLeft: const Radius.circular(20.0),
+          bottomRight: const Radius.circular(20.0),
+        ),
+      ),
+      child: TextField(
+        keyboardType: TextInputType.multiline,
+        maxLines: 7,
+        decoration: InputDecoration(
+            border: InputBorder.none, hintText: 'Type here...'),
+      ),
+    );
+  }
+}
+
+class ChallengeInput extends StatefulWidget {
+  @override
+  _ChallengeInputState createState() => _ChallengeInputState();
+}
+
+class _ChallengeInputState extends State<ChallengeInput> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 40),
+      height: 80,
+      width: 270,
+      decoration: new BoxDecoration(
+        color: Colors.deepPurpleAccent[100],
+        borderRadius: new BorderRadius.only(
+          topLeft: const Radius.circular(20.0),
+          topRight: const Radius.circular(20.0),
+          bottomLeft: const Radius.circular(20.0),
+          bottomRight: const Radius.circular(20.0),
+        ),
+      ),
+      child: TextField(
+        keyboardType: TextInputType.multiline,
+        maxLines: 7,
+        decoration: InputDecoration(
+            border: InputBorder.none, hintText: 'Type here...'),
       ),
     );
   }
