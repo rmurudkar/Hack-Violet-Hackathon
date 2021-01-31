@@ -4,8 +4,7 @@ import 'package:lilac/nav.dart';
 class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
+    return Scaffold(
         resizeToAvoidBottomInset: false,
         resizeToAvoidBottomPadding: true,
         backgroundColor: Colors.white,
@@ -15,10 +14,10 @@ class Home extends StatelessWidget {
               Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
           backgroundColor: Colors.purple,
         ),
+        //bottomNavigationBar: Nav(),
         body: SingleChildScrollView(
           child: userGreeting(),
         ),
-      ),
     );
   }
 }
