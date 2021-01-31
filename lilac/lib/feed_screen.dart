@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lilac/nav.dart';
 
 class Feed extends StatelessWidget {
   @override
@@ -9,10 +10,11 @@ class Feed extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
-          title: Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
+          title:
+              Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
           backgroundColor: Colors.purple,
         ),
-        body: Image.asset("assets/Capture.PNG", height: 500.0, width:500.0),
+        body: Image.asset("assets/Capture.PNG", height: 500.0, width: 500.0),
       ),
     );
   }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lilac/nav.dart';
 
 class Home extends StatelessWidget {
   @override
@@ -6,18 +7,21 @@ class Home extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         resizeToAvoidBottomInset: false,
+        resizeToAvoidBottomPadding: true,
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
-          title: Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
+          title:
+              Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
           backgroundColor: Colors.purple,
         ),
-        body: userGreeting(),
+        body: SingleChildScrollView(
+          child: userGreeting(),
+        ),
       ),
     );
   }
 }
-
 
 class userGreeting extends StatefulWidget {
   @override
@@ -33,119 +37,117 @@ class _MoodIconsState extends State<MoodIcons> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      mainAxisSize: MainAxisSize.max,
-      children: <Widget>[
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/chill.png'),
-                size: 20,
-                color: Colors.deepPurpleAccent,),
-              tooltip: 'Chill',
-              onPressed: () {
-              },
-            ),
-            Text('Chill')
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/happy.png'),
-                size: 20,
-                color: Colors.deepPurpleAccent,),
-              tooltip: 'Happy',
-              onPressed: () {
-              },
-            ),
-            Text('Happy')
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/hyped.png'),
-                size: 20,
-                color: Colors.deepPurpleAccent,),
-              tooltip: 'Hyped',
-              onPressed: () {
-              },
-            ),
-            Text('Hyped')
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/sad.png'),
-                size: 20,
-                color: Colors.deepPurpleAccent,),
-              tooltip: 'Sad',
-              onPressed: () {
-              },
-            ),
-            Text('Sad')
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/anxious.png'),
-                size: 20,
-                color: Colors.deepPurpleAccent,),
-              tooltip: 'Anxious',
-              onPressed: () {
-              },
-            ),
-            Text('Anxious')
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/angry.png'),
-                size: 20,
-                color: Colors.deepPurpleAccent,),
-              tooltip: 'Angry',
-              onPressed: () {
-              },
-            ),
-            Text('Angry')
-          ],
-        ),
-        Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            IconButton(
-              icon: ImageIcon(
-                AssetImage('assets/depressed.png'),
-                size: 20,
-                color: Colors.deepPurpleAccent,),
-              tooltip: 'Depressed',
-              onPressed: () {
-              },
-            ),
-            Text('Depressed')
-          ],
-        ),
-      ]
-    );
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        mainAxisSize: MainAxisSize.max,
+        children: <Widget>[
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: ImageIcon(
+                  AssetImage('assets/chill.png'),
+                  size: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+                tooltip: 'Chill',
+                onPressed: () {},
+              ),
+              Text('Chill')
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: ImageIcon(
+                  AssetImage('assets/happy.png'),
+                  size: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+                tooltip: 'Happy',
+                onPressed: () {},
+              ),
+              Text('Happy')
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: ImageIcon(
+                  AssetImage('assets/hyped.png'),
+                  size: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+                tooltip: 'Hyped',
+                onPressed: () {},
+              ),
+              Text('Hyped')
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: ImageIcon(
+                  AssetImage('assets/sad.png'),
+                  size: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+                tooltip: 'Sad',
+                onPressed: () {},
+              ),
+              Text('Sad')
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: ImageIcon(
+                  AssetImage('assets/anxious.png'),
+                  size: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+                tooltip: 'Anxious',
+                onPressed: () {},
+              ),
+              Text('Anxious')
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: ImageIcon(
+                  AssetImage('assets/angry.png'),
+                  size: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+                tooltip: 'Angry',
+                onPressed: () {},
+              ),
+              Text('Angry')
+            ],
+          ),
+          Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              IconButton(
+                icon: ImageIcon(
+                  AssetImage('assets/depressed.png'),
+                  size: 20,
+                  color: Colors.deepPurpleAccent,
+                ),
+                tooltip: 'Depressed',
+                onPressed: () {},
+              ),
+              Text('Depressed')
+            ],
+          ),
+        ]);
   }
 }
-
 
 class _UserGreetingState extends State<userGreeting> {
   @override
@@ -158,8 +160,8 @@ class _UserGreetingState extends State<userGreeting> {
           width: 240,
           color: Colors.transparent,
           child: Text(
-            "Hello [User Name],",
-            style: TextStyle(fontSize: 25),
+            "Greetings!",
+            style: TextStyle(fontSize: 20),
           ),
         ),
         UserFeelings(),
@@ -263,8 +265,8 @@ class _WorriesInputState extends State<WorriesInput> {
       child: TextField(
         keyboardType: TextInputType.multiline,
         maxLines: 7,
-        decoration: InputDecoration(
-            border: InputBorder.none, hintText: 'Type here...'),
+        decoration:
+            InputDecoration(border: InputBorder.none, hintText: 'Type here...'),
       ),
     );
   }
@@ -294,8 +296,8 @@ class _StressInputState extends State<StressInput> {
       child: TextField(
         keyboardType: TextInputType.multiline,
         maxLines: 7,
-        decoration: InputDecoration(
-            border: InputBorder.none, hintText: 'Type here...'),
+        decoration:
+            InputDecoration(border: InputBorder.none, hintText: 'Type here...'),
       ),
     );
   }
@@ -325,8 +327,8 @@ class _ChallengeInputState extends State<ChallengeInput> {
       child: TextField(
         keyboardType: TextInputType.multiline,
         maxLines: 7,
-        decoration: InputDecoration(
-            border: InputBorder.none, hintText: 'Type here...'),
+        decoration:
+            InputDecoration(border: InputBorder.none, hintText: 'Type here...'),
       ),
     );
   }

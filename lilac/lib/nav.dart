@@ -3,15 +3,14 @@ import 'package:lilac/home_screen.dart';
 import 'package:lilac/feed_screen.dart';
 import 'package:lilac/third_screen.dart';
 
-
 class Nav extends StatefulWidget {
   @override
   _NavState createState() => _NavState();
 }
 
 class _NavState extends State<Nav> {
-  int _selectedIndex=0;
-  List<Widget> _widgetOptions= <Widget>[
+  int _selectedIndex = 0;
+  List<Widget> _widgetOptions = <Widget>[
     Home(),
     Feed(),
     ThirdScreen(),
@@ -19,7 +18,7 @@ class _NavState extends State<Nav> {
 
   void _onItemtap(int index) {
     setState(() {
-      _selectedIndex=index;
+      _selectedIndex = index;
     });
   }
 
@@ -60,5 +59,3 @@ class _NavState extends State<Nav> {
     );
   }
 }
-
-
