@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lilac/screens/home_screen.dart';
-import 'package:lilac/screens/feed_screen.dart';
-import 'package:lilac/screens/third_screen.dart';
+import 'package:lilac/home_screen.dart';
+import 'package:lilac/feed_screen.dart';
+import 'package:lilac/third_screen.dart';
 
 
 class Nav extends StatefulWidget {

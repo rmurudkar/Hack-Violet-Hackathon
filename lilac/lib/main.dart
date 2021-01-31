@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'file:///C:/Users/KHALED/Desktop/GitHub/Hack-Violet-Hackathon/lilac/lib/screens/nav.dart';
+import 'package:lilac/nav.dart';
 
 void main() {
   runApp(MyApp());
