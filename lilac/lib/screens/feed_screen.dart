@@ -9,10 +9,10 @@ class Feed extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Lilac"),
+          title: Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
           backgroundColor: Colors.purple,
         ),
-        //body: userGreeting(),
+        body: Image.asset("assets/Capture.PNG", height: 500.0, width:500.0),
       ),
     );
   }

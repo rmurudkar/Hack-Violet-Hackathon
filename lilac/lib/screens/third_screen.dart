@@ -10,7 +10,7 @@ class ThirdScreen extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Lilac"),
+          title: Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
           backgroundColor: Colors.purple,
         ),
         body: Image.asset("assets/source.gif", height: 500.0, width:500.0),

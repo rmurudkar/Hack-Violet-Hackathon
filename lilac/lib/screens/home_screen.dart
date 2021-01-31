@@ -9,11 +9,10 @@ class Home extends StatelessWidget {
         backgroundColor: Colors.white,
         appBar: AppBar(
           centerTitle: true,
-          title: Text("Lilac"),
+          title: Image.asset('assets/flower.png', fit: BoxFit.contain, height: 40),
           backgroundColor: Colors.purple,
         ),
         body: userGreeting(),
-        //bottomNavigationBar: BottomBar(),
       ),
     );
   }
