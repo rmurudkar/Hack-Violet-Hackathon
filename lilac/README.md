@@ -1,6 +1,6 @@
 # lilac
 
-Health tracking application
+Health tracking mobile application
 
 ## Getting Started
 
